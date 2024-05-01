@@ -31,7 +31,7 @@ export default class Modal extends Component {
         {isOpen && (
           <div className="Overlay">
             <div className="Modal">
-              <img src={imageURL} alt="Selected Image" />
+              <img src={imageURL} alt="" />
             </div>
           </div>
         )}
