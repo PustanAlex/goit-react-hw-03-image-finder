@@ -1,14 +1,25 @@
 import React, { Component } from 'react';
 
 export default class SearchBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      submitted: false
+    };
+  }
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.props.handleSubmit(e);
+    this.setState({ submitted: true });
+  }
 
   render() {
-    const {handleSearchInput, handleSubmit} = this.props
+    const { handleSearchInput } = this.props;
     return (
       <header className="Searchbar">
-        <form className="SearchForm" onSubmit={handleSubmit}>
-          <button  type="submit" className="SearchForm-button" >
+        <form className="SearchForm" onSubmit={this.handleSubmit}>
+          <button type="submit" className="SearchForm-button">
             <span>Search</span>
           </button>
 

@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import { ClipLoader } from "react-spinners";
 
 export default class Loader extends Component {
-    constructor(props) {
-        super(props);
-      }
-    
       render() {
-        return
+        return (
+          <div className="loader-div">
+            <ClipLoader />
+          </div>
+        )
       }
 }
