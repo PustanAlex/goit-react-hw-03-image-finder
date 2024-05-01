@@ -16,7 +16,7 @@ export default class ImageGallery extends Component {
       pageNumber: 1,
       iconsPerPage: 12,
       selectedImg: null,
-      isOpen: false,
+      isOpen: false
     };
   }
 
